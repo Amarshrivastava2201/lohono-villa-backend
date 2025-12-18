@@ -29,15 +29,19 @@ src/
 
 ### 1️⃣ Install dependencies
 npm install
+
 2️⃣ Configure environment
 Create a .env file in root:
 
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/lohono_villas
+
 3️⃣ Seed database
 npm run seed
+
 4️⃣ Start server
 npm run dev
+
 🔗 API Endpoints
 1️⃣ List Villas with Availability
 GET /v1/villas/availability
@@ -58,6 +62,7 @@ order
 
 Example
 curl "http://localhost:5000/v1/villas/availability?check_in=2025-01-10&check_out=2025-01-13"
+
 2️⃣ Get Villa Quote
 GET /v1/villas/:villa_id/quote
 
