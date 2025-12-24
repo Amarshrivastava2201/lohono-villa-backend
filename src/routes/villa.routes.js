@@ -7,6 +7,7 @@ import {
 const router = express.Router();
 
 router.get("/availability", getAvailableVillas);
-router.get("/:villa_id/quote", getVillaQuote);
+router.get("/:villaId/quote", getVillaQuote);
+
 
 export default router;

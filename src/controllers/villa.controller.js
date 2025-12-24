@@ -17,13 +17,14 @@ import { fetchVillaQuote } from "../services/villa.service.js";
 
 export const getVillaQuote = async (req, res) => {
   try {
-    const { villa_id } = req.params;
-    const result = await fetchVillaQuote(villa_id, req.query);
+    const { villaId } = req.params;
+
+    const result = await fetchVillaQuote(villaId, req.query);
     res.json(result);
   } catch (error) {
     res.status(400).json({
       error: "invalid_request",
-      message: error.message
+      message: error.message,
     });
   }
 };
